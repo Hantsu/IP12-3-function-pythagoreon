@@ -1,0 +1,87 @@
+/*
+    functions_programming_spring_3_right_triangle.cpp
+
+    Summary: Create a program that calculates the inputted sides
+             of a triangle, and tells the user if the inputs create
+             a right triangle or not.
+    Author:  Robert Curtin and Max T (we did equal work!!)
+    Date:    02/14/2019
+*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void intro();
+int getAside();
+int getBside();
+int getCside();
+void computeRightT(int,int,int);
+
+int main()
+{
+    int aside;
+    int bside;
+    int cside;
+
+
+    intro();
+    aside = getAside();
+    bside = getBside();
+    cside = getCside();
+    computeRightT(aside, bside, cside);
+
+    return 0;
+}
+
+void intro()
+{
+    cout << "Enter side lengths for A, B and C: \n";
+    return;
+}
+
+
+int getAside()
+{
+    int aside;
+    cout << "A: ";
+    cin >> aside;
+
+    return aside;
+}
+
+int getBside()
+{
+    int bside;
+    cout << "B: ";
+    cin >> bside;
+
+    return bside;
+}
+
+int getCside()
+{
+    int cside;
+    cout << "C: ";
+    cin >> cside;
+
+    return cside;
+}
+
+void computeRightT(int aside, int bside, int cside)
+{
+    cside = cside * cside;
+    aside = aside * aside;
+    bside = bside * bside;
+
+    if (cside == ((bside) + (aside)))
+    {
+        cout << "Your triangle is a RIGHT triangle! \n";
+    }
+    else
+    {
+        cout << "Sorryyyy. Not a right triangle... \n";
+    }
+    return;
+}
+
+
